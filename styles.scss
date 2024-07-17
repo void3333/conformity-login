@@ -1,0 +1,170 @@
+$dark-primary-color: #1e252f;
+$dark-secondary-color: #27303d;
+$dark-text-color: #adadad;
+$dark-input-bg-color: #343b47;
+$dark-button-bg-color: #2f5581; // Blue button
+$dark-button-bg-hover-color: #1b5c98; // Darker blue button hover
+
+$light-primary-color: #567188;
+$light-secondary-color: #d9d9d9;
+$light-text-color: #19304b;
+$light-input-bg-color: #c0ccd5;
+$light-button-bg-color: #5487bb; // Blue button
+$light-button-bg-hover-color: #3b7ec7; // Darker blue button hover
+
+$error-color: #ff4500; // Orange color for error messages
+$border-radius: 5px;
+$full-border-radius: 60px;
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+  padding: 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.logo-img-white {
+  height: 4rem;
+  margin-bottom: 1.6em;
+}
+
+.logo-img-blue {
+  display: none;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: $full-border-radius;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+
+.theme-toggle {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: $full-border-radius;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.password-recovery {
+  text-decoration: none;
+  margin-top: 2.5em;
+  display: inline-block;
+  font-size: .8em;
+}
+
+.password-recovery:visited {
+  color: $light-primary-color;
+}
+
+button:hover {
+  background-color: $dark-button-bg-hover-color;
+}
+
+.error-message {
+  color: $error-color;
+  margin-top: 1rem;
+  display: none;
+}
+
+.theme-dark {
+  background-color: $dark-primary-color;
+  color: $dark-text-color;
+
+  .login-container {
+    background-color: $dark-secondary-color;
+  }
+
+  input {
+    background-color: $dark-input-bg-color;
+    color: $dark-text-color;
+  }
+
+  button {
+    background-color: $dark-button-bg-color;
+    color: $dark-text-color;
+  }
+
+  button:hover {
+    background-color: $dark-button-bg-hover-color;
+  }
+}
+
+.theme-light {
+  background-color: $light-primary-color;
+  color: $light-text-color;
+
+  .login-container {
+    background-color: $light-secondary-color;
+  }
+
+  input {
+    background-color: $light-input-bg-color;
+    color: $light-text-color;
+  }
+
+  button {
+    background-color: $light-button-bg-color;
+    color: $light-text-color;
+  }
+
+  button:hover {
+    background-color: $light-button-bg-hover-color;
+  }
+
+  .logo-img-white {
+    display: none;
+  }
+
+  .logo-img-blue {
+    display: inline-block;
+    height: 4rem;
+    margin-bottom: 1.6em;
+  }
+
+}
